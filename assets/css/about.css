@@ -1,0 +1,110 @@
+@import url("../css/global.css");
+h1 {
+  color: var(--color-secundario);
+}
+.sobre_mi {
+  display: flex;
+  align-items: center;
+  padding: 10% 15%;
+  justify-content: space-between;
+  gap: 82px;
+}
+.sobre_mi__contenido {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex:1;
+}
+
+.sobre_mi__contenido__titulo {
+  font-family: Krona One;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: left;
+}
+.sobre_mi__contenido__texto {
+  font-family: var(--fuente-montserrat);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+}
+
+.sobre_mi__imagen {
+    width: 25%;
+  }
+  
+@media (max-width: 575px) {
+    .header {
+      padding: 1rem 5rem;
+    }
+    .header__menu {
+      justify-content: center;
+    }
+    .header__menu__link {
+      font-size: 0.8rem;
+    }
+    .sobre_mi {
+      flex-direction: column-reverse;
+      gap: 20px;
+      padding: 5%;
+    }
+    .sobre_mi__contenido {
+      width: auto;
+    }
+    .sobre_mi__contenido__titulo {
+      text-align: center;
+    }
+    .sobre_mi__contenido__texto {
+      text-align: center;
+      /* max-width: 800px; */
+    }
+  }
+  
+  /* Móviles (hasta 767px) */
+  @media (max-width: 767px) {
+    .header {
+      padding: 1rem 5rem;
+    }
+    .header__menu {
+      justify-content: center;
+    }
+    .sobre_mi {
+      flex-direction: column-reverse;
+      gap: 40px;
+      margin-top: 10%;
+    }
+    .sobre_mi__contenido {
+      width: auto;
+    }
+    .sobre_mi__contenido__titulo {
+      text-align: center;
+    }
+    .sobre_mi__contenido__texto {
+      text-align: center;
+      /* max-width: 800px; */
+    }
+  }
+@media (min-width: 1024px) {
+    .header {
+      padding: 1rem 5rem;
+      width: 100%;
+      background-color: #070f2b;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  
+    .sobre_mi {
+      margin-top: 5%;
+      gap: 40px;
+      padding: 5%;
+    }
+    .sobre_mi__contenido {
+      width: auto;
+      gap: 10px;
+    }
+  
+  }

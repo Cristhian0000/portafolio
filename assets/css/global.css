@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --color-primario: #000000;
+  --color-secundario: #6e6e6e;
+  --color-terciario: #22d4df;
+
+  --fuente-montserrat: "Montserrat", sans-serif;
+  --fuente-krona: "Krona One", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--fuente-montserrat);
+  line-height: 1.6;
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  padding: 1rem 5rem;
+  width: 100%;
+  background-color: #070f2b;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.header__menu {
+  display: flex;
+  gap: 80px;
+}
+.header__menu__link {
+  font-family: var(--fuente-montserrat);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--color-terciario);
+  text-decoration: none;
+}
+
+/* Links */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.footer {
+  background-color: var(--color-terciario);
+  text-align: center;
+  padding: 24px;
+  color: var(--color-primario);
+  font-family: var(--fuente-montserrat);
+  font-weight: 400;
+  font-size: 1rem;
+  height: 80px;
+}
+
+@media print and (orientation: portrait) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .header,
+  .footer,
+  .curriculum__descargar_contenido {
+    display: none;
+  }
+  body {
+    -webkit-print-color-adjust: exact; /* Asegura colores de fondo */
+    print-color-adjust: exact;
+    width: 100%;
+  }
+}
+
+@media print and (orientation: landscape) {
+  .header,
+  .footer,
+  .curriculum__descargar_contenido {
+    display: none;
+  }
+  body {
+    -webkit-print-color-adjust: exact; /* Asegura colores de fondo */
+    print-color-adjust: exact;
+  }
+  .contenedor {
+    width: 90%;
+  }
+}
